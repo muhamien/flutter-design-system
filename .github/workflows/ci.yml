@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Install validator dependency
         run: python3 -m pip install -r tool/requirements-skills.txt
       - name: Validate discovery and references
