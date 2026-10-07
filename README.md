@@ -1,4 +1,4 @@
-# Flutter Design System · Nusantara UI
+# Flutter Design System
 
 [![Flutter CI](https://github.com/muhamien/flutter-design-system/actions/workflows/ci.yml/badge.svg)](https://github.com/muhamien/flutter-design-system/actions/workflows/ci.yml)
 
