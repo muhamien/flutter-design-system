@@ -1,0 +1,7 @@
+{
+  "space": {"xs": 4, "sm": 8, "md": 16, "lg": 24, "xl": 32},
+  "radius": {"control": 12, "card": 20},
+  "layout": {"minTouchTarget": 48, "expandedBreakpoint": 840, "maxContentWidth": 1120},
+  "motion": {"feedback": 200},
+  "brand": {"ocean": "#006A6A", "violet": "#6750A4"}
+}

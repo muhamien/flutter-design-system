@@ -7,6 +7,18 @@ on:
 permissions:
   contents: read
 jobs:
+  skills:
+    name: Validate AI skills
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install validator dependency
+        run: python3 -m pip install -r tool/requirements-skills.txt
+      - name: Validate discovery and references
+        run: python3 tool/validate_skills.py
+      - name: Test token helper
+        run: python3 -m unittest discover -s tool/tests -v
   check:
     runs-on: ubuntu-latest
     timeout-minutes: 20
@@ -17,8 +29,15 @@ jobs:
           flutter-version: '3.32.8'
           channel: stable
           cache: true
+      - name: Generate primitive token smoke sample
+        run: |
+          python3 .agents/skills/flutter-design-tokens/scripts/generate_tokens.py \
+            --input .agents/skills/flutter-design-tokens/references/example.tokens.json \
+            --output packages/nusantara_ui/lib/src/tokens/generated_tokens_smoke.dart
       - name: Format, analyze and test
-        run: ./tool/check.sh
+        run: |
+          trap 'rm -f packages/nusantara_ui/lib/src/tokens/generated_tokens_smoke.dart' EXIT
+          ./tool/check.sh
       - name: Build catalog
         working-directory: apps/catalog
         run: flutter build web --release

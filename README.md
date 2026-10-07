@@ -120,6 +120,18 @@ CI checks formatting, analysis, package tests, feature tests, and a release web 
 
 The component catalog is a baseline for manual review. Before production, check screen readers, keyboard focus, text scaling, color contrast, target platforms, and real product content. Golden screenshots and native integration tests are not included yet.
 
+## AI-assisted generation
+
+Repository-local AI skills live in `.agents/skills`:
+
+- `$flutter-design-system`: cross-layer generation and integration.
+- `$flutter-design-tokens`: primitive tokens and structured JSON import.
+- `$flutter-theme`: Material themes and semantic extensions.
+- `$flutter-component`: reusable controls, states, catalog, and tests.
+- `$flutter-pattern`: responsive UI compositions.
+
+See [AI skills usage and prompt examples](docs/ai-skills.md). The token skill also includes a standalone JSON-to-Dart helper. Changes follow a working branch → pull request workflow, as recorded in [AGENTS.md](AGENTS.md).
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Bug reports, new component proposals, and pull requests are welcome in English or Indonesian. Breaking API changes should include migration instructions.
