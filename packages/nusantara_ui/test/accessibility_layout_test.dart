@@ -7,19 +7,22 @@ void main() {
     tester,
   ) async {
     final semantics = tester.ensureSemantics();
-    addTearDown(semantics.dispose);
-    await tester.pumpWidget(
-      MaterialApp(
-        theme: DsTheme.build(),
-        home: Scaffold(
-          body: Center(
-            child: DsButton(label: 'Simpan', onPressed: () {}),
+    try {
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: DsTheme.build(),
+          home: Scaffold(
+            body: Center(
+              child: DsButton(label: 'Simpan', onPressed: () {}),
+            ),
           ),
         ),
-      ),
-    );
-    await expectLater(tester, meetsGuideline(androidTapTargetGuideline));
-    await expectLater(tester, meetsGuideline(labeledTapTargetGuideline));
+      );
+      await expectLater(tester, meetsGuideline(androidTapTargetGuideline));
+      await expectLater(tester, meetsGuideline(labeledTapTargetGuideline));
+    } finally {
+      semantics.dispose();
+    }
   });
 
   for (final brightness in Brightness.values) {
