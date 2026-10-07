@@ -1,0 +1,29 @@
+name: Flutter CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.32.8'
+          channel: stable
+          cache: true
+      - name: Format, analyze and test
+        run: ./tool/check.sh
+      - name: Build catalog
+        working-directory: apps/catalog
+        run: flutter build web --release
+      - name: Upload catalog build
+        uses: actions/upload-artifact@v4
+        with:
+          name: catalog-web
+          path: apps/catalog/build/web

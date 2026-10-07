@@ -1,0 +1,24 @@
+# Dart / Flutter
+.dart_tool/
+.packages
+.pub/
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+coverage/
+**/doc/api/
+**/android/local.properties
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/Pods/
+**/macos/Pods/
+# Library dependencies are resolved by consumers; application locks are committed.
+packages/**/pubspec.lock
+# Editors / local files
+.idea/
+*.iml
+.vscode/
+.DS_Store
+.env
+.env.*
+!.env.example

@@ -1,0 +1,17 @@
+name: nusantara_catalog
+description: Katalog interaktif Nusantara UI.
+publish_to: none
+version: 1.0.0+1
+environment:
+  sdk: '>=3.8.0 <4.0.0'
+  flutter: '>=3.32.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  nusantara_ui:
+    path: ../../packages/nusantara_ui
+flutter:
+  uses-material-design: true
+dev_dependencies:
+  flutter_test:
+    sdk: flutter

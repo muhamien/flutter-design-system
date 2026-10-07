@@ -1,0 +1,17 @@
+name: Feature request
+description: Propose a component or improvement
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Product need
+      description: Describe where this is useful and why existing components are insufficient.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed API and states
+    validations:
+      required: true
