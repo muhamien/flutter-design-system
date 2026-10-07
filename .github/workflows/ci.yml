@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.32.8'
@@ -42,7 +42,7 @@ jobs:
         working-directory: apps/catalog
         run: flutter build web --release
       - name: Upload catalog build
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: catalog-web
           path: apps/catalog/build/web
