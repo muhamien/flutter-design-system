@@ -22,3 +22,7 @@ packages/**/pubspec.lock
 .env
 .env.*
 !.env.example
+
+# AI skill helper caches
+__pycache__/
+*.py[cod]

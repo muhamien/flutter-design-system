@@ -24,8 +24,22 @@ flutter run -d chrome
 
 ## Pull requests
 
+Use a working branch and open a pull request. Do not push directly to `main`.
+
 Describe the problem, resulting behavior, and validation. Include screenshots for visual changes. Keep changes focused. Do not commit credentials or generated build artifacts. API removals require a migration note and a versioning decision.
 
 ## License
 
 By submitting a contribution, you agree that it can be distributed under the project's MIT license.
+
+## AI skill changes
+
+Read `docs/ai-skills.md`. Validate skill metadata/reference links and test helper behavior with:
+
+```sh
+python3 -m pip install -r tool/requirements-skills.txt
+python3 tool/validate_skills.py
+python3 -m unittest discover -s tool/tests -v
+```
+
+Keep instructions specific to reusable design-system work and preserve the user's task scope. Skill schema checks do not replace review of generated Flutter implementations.

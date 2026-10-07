@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Five repository-local AI skills for generating design-system foundations and UI.
+- Validated primitive JSON-to-Dart token helper, documentation, and CI checks.
+- Repository instructions requiring working branches and pull requests.
+
 ## 0.1.0
 
 - Material 3 foundations, two brand seeds, light/dark/system themes.

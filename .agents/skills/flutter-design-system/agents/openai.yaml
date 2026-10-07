@@ -1,0 +1,4 @@
+interface:
+  display_name: "Flutter Design System"
+  short_description: "Flutter Design System generation and integration"
+  default_prompt: "Gunakan $flutter-design-system untuk mengimplementasikan perubahan pada design system Flutter di repositori ini."
