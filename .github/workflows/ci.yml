@@ -23,7 +23,7 @@ jobs:
         working-directory: apps/catalog
         run: flutter build web --release
       - name: Upload catalog build
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: catalog-web
           path: apps/catalog/build/web
