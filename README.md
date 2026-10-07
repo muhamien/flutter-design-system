@@ -18,6 +18,8 @@ This repository contains a reusable design system package and a runnable compone
 
 ## Quick start
 
+Click **Use this template** on GitHub to start your own repository, or clone this project directly.
+
 Use **Flutter 3.32.8 / Dart 3.8**, the baseline pinned in CI and `.fvmrc`. FVM is optional. See the [official Flutter installation documentation](https://docs.flutter.dev/install).
 
 ```sh
